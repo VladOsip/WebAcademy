@@ -1,0 +1,20 @@
+$main-color: red;
+$accent-color: yellow;
+$main-color-dark: brown;
+
+.container {
+  background: $main-color;
+  .child {
+    border: 1px solid $accent-color;
+    a {
+      color: green;
+    }
+  }
+  &-dark {
+    background: $main-color-dark;
+  }
+}
+
+.child {
+  border: 1px solid green;
+}

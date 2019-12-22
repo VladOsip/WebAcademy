@@ -1,0 +1,23 @@
+{
+  "index": [
+    "./src/index/index.js"
+  ],
+  "lesson_5": [
+    "./src/lesson_5/lesson_5.js"
+  ],
+  "homework1": [
+    "./src/homework1/homework1.js"
+  ],
+  "lesson_6": [
+    "./src/lesson_6/lesson_6.js"
+  ],
+  "lesson7": [
+    "./src/lesson7/lesson7.js"
+  ],
+  "homeworkmen": [
+    "./src/homeworkmen/homeworkmen.js"
+  ],
+  "lesson_8": [
+    "./src/lesson_8/lesson_8.js"
+  ]
+}

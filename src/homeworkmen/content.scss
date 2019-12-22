@@ -1,0 +1,147 @@
+.main_header {
+  background: #000000;
+  color: #939393;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+
+.main_text {
+  padding: 23px;
+  text-transform: uppercase;
+  align-items: center;
+  display: flex;
+}
+
+.company_name {
+  font-weight: 500;
+  font-size: 25px;
+  color: white;
+  letter-spacing: 5px;
+  padding: 23px;
+  text-transform: uppercase;
+  align-items: center;
+  display: flex;
+}
+
+.title {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  font-size: 22px;
+  color: #313131;
+  padding: 36px;
+  text-transform: uppercase;
+}
+
+.block-wrapper {
+  padding: 10px;
+}
+
+.gallery {
+  max-width: 920px;
+  margin: 0 auto;
+  &__item {
+    background-size: contain;
+    height: 351px;
+    background-position: center;
+    background-repeat: no-repeat;
+    @for $i from 1 through 8 {
+      &:nth-child(#{$i}) {
+        background-image: url(./#{$i}.jpg);
+      }
+    }
+  }
+}
+
+.price_info {
+  padding: 10px 0;
+}
+
+.price_name {
+  font-size: 16px;
+  color: #313131;
+  margin-bottom: 3px;
+}
+
+.price {
+  font-size: 13px;
+  color: #313131;
+  margin-right: 10px;
+}
+
+.sale {
+  text-decoration: line-through;
+  color: #626262;
+}
+
+.btn {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 15%;
+  right: 2%;
+  visibility: hidden;
+  background: #626262;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.btn > .submenu {
+  width: 100%;
+}
+
+.submenu {
+  position: absolute;
+  background: black;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.submenu {
+  transform: scaleY(0);
+}
+
+ul,
+li:hover .submenu {
+  -webkit-transform: scaleY(1);
+  -ms-transform: scaleY(1);
+  transform: scaleY(1);
+}
+
+@media screen and(max-width: $screen-lg) {
+  .gallery {
+    margin: 0 26px;
+  }
+  .btn {
+    visibility: visible;
+  }
+  .main_text {
+    display: none;
+  }
+  button:hover .submenu {
+    transform: scaleY(1);
+  }
+  .submenu {
+    transform-origin: 0 0;
+  }
+}
+
+@media screen and (max-width: $screen-md - 1px) {
+  .gallery {
+    &__item {
+      height: 351px;
+    }
+  }
+}

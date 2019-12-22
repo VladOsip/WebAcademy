@@ -1,0 +1,15 @@
+$list-spacing: 6px;
+
+.page-container {
+  min-height: 100vh;
+  max-width: 980px;
+  margin: 0 auto;
+  background: rgb(245, 208, 141);
+}
+
+.product-list {
+  padding: $list-spacing;
+  &__item {
+    padding: $list-spacing;
+  }
+}
