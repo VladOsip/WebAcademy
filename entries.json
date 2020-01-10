@@ -20,13 +20,13 @@
   "lesson_8": [
     "./src/lesson_8/lesson_8.js"
   ],
-  "homework2": [
-    "./src/homework2/homework2.js"
-  ],
   "lesson_9": [
     "./src/lesson_9/lesson_9.js"
   ],
   "burgundy": [
     "./src/burgundy/burgundy.js"
+  ],
+  "homework7": [
+    "./src/homework7/homework7.js"
   ]
 }

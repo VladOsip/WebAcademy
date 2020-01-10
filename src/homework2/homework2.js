@@ -1,1 +1,0 @@
-import './homework2.scss';
