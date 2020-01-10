@@ -23,26 +23,3 @@ body {
   padding: 0;
   margin: 0;
 }
-
-.container {
-  max-width: 60vw;
-  height: 47vh;
-  transform: translate(35%, 50%);
-  background: red;
-}
-
-.first_text {
-  box-sizing: content-box;
-  position: absolute;
-}
-
-.block {
-  margin: 8px;
-  box-sizing: border-box;
-  width: 120px;
-  height: 134px;
-}
-
-.home {
-  background: #3387ea;
-}
