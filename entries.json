@@ -25,5 +25,8 @@
   ],
   "lesson_9": [
     "./src/lesson_9/lesson_9.js"
+  ],
+  "burgundy": [
+    "./src/burgundy/burgundy.js"
   ]
 }
