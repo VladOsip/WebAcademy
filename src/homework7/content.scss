@@ -98,12 +98,14 @@
     display: flex;
   }
   &__name {
-    justify-content: start;
+    display: flex;
+    justify-content: flex-start;
     font-size: 10px;
     margin-left: 8px;
   }
   &__data {
-    justify-content: end;
+    display: flex;
+    justify-content: flex-end;
     font-size: 10px;
     margin-left: 8px;
   }
