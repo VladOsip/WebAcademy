@@ -112,20 +112,16 @@ var toggleOff = function toggleOff() {
 
 var activeBlock = function activeBlock() {
   blocks[activeIndex].classList.add("active");
-};
+}; // Для выделения по клике на блок
+// for (let i = 0; i < blocks.length; i++) {
+//   blocks[i].onclick = function() {
+//     toggleOff();
+//     activeIndex = i;
+//     activeBlock();
+//     console.log("On Click");
+//   };
+// }
 
-var _loop = function _loop(i) {
-  blocks[i].onclick = function () {
-    toggleOff();
-    activeIndex = i;
-    activeBlock();
-    console.log("On Click");
-  };
-};
-
-for (var i = 0; i < blocks.length; i++) {
-  _loop(i);
-}
 
 var changeIndexRight = function changeIndexRight() {
   if (activeIndex + 1 < blocks.length) {
@@ -146,15 +142,15 @@ var changeIndexLeft = function changeIndexLeft() {
 var toggleClickRight = function toggleClickRight() {
   toggleOff();
   console.log("NEXT");
-  activeBlock(0);
   changeIndexRight();
+  activeBlock(0);
 };
 
 var toggleClickLeft = function toggleClickLeft() {
   toggleOff();
   console.log("PREV");
-  activeBlock(0);
   changeIndexLeft();
+  activeBlock(0);
 };
 
 nextButton.onclick = toggleClickRight;
