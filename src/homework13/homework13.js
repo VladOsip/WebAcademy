@@ -17,14 +17,16 @@ const activeBlock = () => {
   blocks[activeIndex].classList.add("active");
 };
 
-for (let i = 0; i < blocks.length; i++) {
-  blocks[i].onclick = function() {
-    toggleOff();
-    activeIndex = i;
-    activeBlock();
-    console.log("On Click");
-  };
-}
+// Для выделения по клике на блок
+
+// for (let i = 0; i < blocks.length; i++) {
+//   blocks[i].onclick = function() {
+//     toggleOff();
+//     activeIndex = i;
+//     activeBlock();
+//     console.log("On Click");
+//   };
+// }
 
 const changeIndexRight = () => {
   if (activeIndex + 1 < blocks.length) {
@@ -45,15 +47,15 @@ const changeIndexLeft = () => {
 const toggleClickRight = () => {
   toggleOff();
   console.log("NEXT");
-  activeBlock(0);
   changeIndexRight();
+  activeBlock(0);
 };
 
 const toggleClickLeft = () => {
   toggleOff();
   console.log("PREV");
-  activeBlock(0);
   changeIndexLeft();
+  activeBlock(0);
 };
 
 nextButton.onclick = toggleClickRight;
