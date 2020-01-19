@@ -18,9 +18,3 @@ import "./lesson_12.scss";
 //     toogleOn(btns[i]);
 //   };
 // }
-
-const btn_on = document.querySelector(".btn_on");
-const btn_off = document.querySelector(".btn_off");
-const lights = document.querySelectorAll(".light");
-
-const colors = ["red", "orange", "green"];

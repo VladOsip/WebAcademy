@@ -1,27 +1,32 @@
-import "./homework12.scss";
+import './homework12.scss';
 
-const btn_on = document.querySelector(".btn_on");
-const btn_off = document.querySelector(".btn_off");
-const lights = document.querySelectorAll(".lights");
-const redButton = document.querySelector(".red");
-const orangeButton = document.querySelector(".orange");
-const greenButton = document.querySelector(".green");
-
-const colors = ["green", "orange", "red"];
-
-const toogleOff = () => {
-  for (let i = 0; i < colors.length; i++) {
-    redButton.style.backgroundColor = "";
-    orangeButton.style.backgroundColor = "";
-    greenButton.style.backgroundColor = "";
-  }
+const red = document.querySelector(“.red”);
+const yellow = document.querySelector(“.yellow”);
+const green = document.querySelector(“.green”);
+const btnStart = document.getElementById(“start”);
+const btnStop = document.getElementById(“stop”);
+const toggleOff = () => {
+  red.style.backgroundColor = “”;
+  yellow.style.backgroundColor = “”;
+  green.style.backgroundColor = “”;
+  btnStart.disabled = true; // блокируем кнопку Старт
+  btnStop.disabled = false;
 };
-
-for (let i = 0; i < colors.length; i++) {
-  btn_on.onclick = () => {
-    redButton.style.backgroundColor = colors[i];
+const toggleOn = () => {
+  red.onclick = function() {
+    toggleOff();
+    red.style.backgroundColor = “red”;
   };
-  btn_off.onclick = () => {
-    toogleOff();
+  yellow.onclick = function() {
+    toggleOff();
+    yellow.style.backgroundColor = “yellow”;
   };
-}
+  green.onclick = function() {
+    toggleOff();
+    green.style.backgroundColor = “green”;
+  };
+  btnStart.disabled = false;
+  btnStop.disabled = true;
+};
+btnStart.addEventListener(“click”, toggleOff);
+btnStop.addEventListener(“click”, toggleOn);
