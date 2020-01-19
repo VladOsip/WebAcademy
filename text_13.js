@@ -81,30 +81,37 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 15);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/lesson_9/lesson_9.js":
-/*!**********************************!*\
-  !*** ./src/lesson_9/lesson_9.js ***!
-  \**********************************/
+/***/ "./src/text_13/text_13.js":
+/*!********************************!*\
+  !*** ./src/text_13/text_13.js ***!
+  \********************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _lesson_9_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lesson_9.scss */ "./src/lesson_9/lesson_9.scss");
-/* harmony import */ var _lesson_9_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_lesson_9_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _text_13_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./text_13.scss */ "./src/text_13/text_13.scss");
+/* harmony import */ var _text_13_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_text_13_scss__WEBPACK_IMPORTED_MODULE_0__);
 
+var blocks = document.querySelector(".block");
+var togglerNext = document.querySelector(".next");
+var togglerPrev = document.querySelector(".prev");
+
+blocks.onclick = function () {
+  blocks.classList.add("active");
+};
 
 /***/ }),
 
-/***/ "./src/lesson_9/lesson_9.scss":
-/*!************************************!*\
-  !*** ./src/lesson_9/lesson_9.scss ***!
-  \************************************/
+/***/ "./src/text_13/text_13.scss":
+/*!**********************************!*\
+  !*** ./src/text_13/text_13.scss ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -112,17 +119,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 7:
-/*!****************************************!*\
-  !*** multi ./src/lesson_9/lesson_9.js ***!
-  \****************************************/
+/***/ 15:
+/*!**************************************!*\
+  !*** multi ./src/text_13/text_13.js ***!
+  \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! ./src/lesson_9/lesson_9.js */"./src/lesson_9/lesson_9.js");
+module.exports = __webpack_require__(/*! ./src/text_13/text_13.js */"./src/text_13/text_13.js");
 
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=lesson_9.js.map
+//# sourceMappingURL=text_13.js.map

@@ -81,30 +81,46 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 11);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/homework2/homework2.js":
-/*!************************************!*\
-  !*** ./src/homework2/homework2.js ***!
-  \************************************/
+/***/ "./src/homeworkjs/homeworkjs.js":
+/*!**************************************!*\
+  !*** ./src/homeworkjs/homeworkjs.js ***!
+  \**************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _homework2_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./homework2.scss */ "./src/homework2/homework2.scss");
-/* harmony import */ var _homework2_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_homework2_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _homeworkjs_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./homeworkjs.scss */ "./src/homeworkjs/homeworkjs.scss");
+/* harmony import */ var _homeworkjs_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_homeworkjs_scss__WEBPACK_IMPORTED_MODULE_0__);
 
+
+var DrawCats = function DrawCats(howManyTimes) {
+  for (var i = 0; i < howManyTimes; i++) {
+    console.log(i + " " + "=^.^=");
+  }
+};
+
+DrawCats(15);
+"всем привет ЛИбо так".toUpperCase();
+var sillyString = "Ну ЛиБо Так ПИсать БуквЫ ОггоО";
+var lowerString = sillyString.toLowerCase();
+var firstString = lowerString[0];
+var normalString = firstString.toUpperCase();
+var lowerString = lowerString.slice(1);
+var allString = normalString + lowerString;
+console.log(allString);
 
 /***/ }),
 
-/***/ "./src/homework2/homework2.scss":
-/*!**************************************!*\
-  !*** ./src/homework2/homework2.scss ***!
-  \**************************************/
+/***/ "./src/homeworkjs/homeworkjs.scss":
+/*!****************************************!*\
+  !*** ./src/homeworkjs/homeworkjs.scss ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -112,17 +128,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 7:
-/*!******************************************!*\
-  !*** multi ./src/homework2/homework2.js ***!
-  \******************************************/
+/***/ 11:
+/*!********************************************!*\
+  !*** multi ./src/homeworkjs/homeworkjs.js ***!
+  \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! ./src/homework2/homework2.js */"./src/homework2/homework2.js");
+module.exports = __webpack_require__(/*! ./src/homeworkjs/homeworkjs.js */"./src/homeworkjs/homeworkjs.js");
 
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=homework2.js.map
+//# sourceMappingURL=homeworkjs.js.map

@@ -81,30 +81,30 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/lesson_9/lesson_9.js":
-/*!**********************************!*\
-  !*** ./src/lesson_9/lesson_9.js ***!
-  \**********************************/
+/***/ "./src/homework7/homework7.js":
+/*!************************************!*\
+  !*** ./src/homework7/homework7.js ***!
+  \************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _lesson_9_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lesson_9.scss */ "./src/lesson_9/lesson_9.scss");
-/* harmony import */ var _lesson_9_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_lesson_9_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _homework7_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./homework7.scss */ "./src/homework7/homework7.scss");
+/* harmony import */ var _homework7_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_homework7_scss__WEBPACK_IMPORTED_MODULE_0__);
 
 
 /***/ }),
 
-/***/ "./src/lesson_9/lesson_9.scss":
-/*!************************************!*\
-  !*** ./src/lesson_9/lesson_9.scss ***!
-  \************************************/
+/***/ "./src/homework7/homework7.scss":
+/*!**************************************!*\
+  !*** ./src/homework7/homework7.scss ***!
+  \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -112,17 +112,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 7:
-/*!****************************************!*\
-  !*** multi ./src/lesson_9/lesson_9.js ***!
-  \****************************************/
+/***/ 9:
+/*!******************************************!*\
+  !*** multi ./src/homework7/homework7.js ***!
+  \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! ./src/lesson_9/lesson_9.js */"./src/lesson_9/lesson_9.js");
+module.exports = __webpack_require__(/*! ./src/homework7/homework7.js */"./src/homework7/homework7.js");
 
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=lesson_9.js.map
+//# sourceMappingURL=homework7.js.map

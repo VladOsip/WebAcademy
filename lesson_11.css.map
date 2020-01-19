@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/lesson_11/lesson_11.scss"],"names":[],"mappings":"AAAA,KAAK,YAAY,WAAW,uBAAuB","file":"lesson_11.css","sourcesContent":[".btn{height:50px;width:50px;border:2px solid black;background-color:red}\n"],"sourceRoot":""}

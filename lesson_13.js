@@ -81,30 +81,106 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 14);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/lesson_9/lesson_9.js":
-/*!**********************************!*\
-  !*** ./src/lesson_9/lesson_9.js ***!
-  \**********************************/
+/***/ "./src/lesson_13/lesson_13.js":
+/*!************************************!*\
+  !*** ./src/lesson_13/lesson_13.js ***!
+  \************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _lesson_9_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lesson_9.scss */ "./src/lesson_9/lesson_9.scss");
-/* harmony import */ var _lesson_9_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_lesson_9_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _lesson_13_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lesson_13.scss */ "./src/lesson_13/lesson_13.scss");
+/* harmony import */ var _lesson_13_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_lesson_13_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _traffic_lighter_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./traffic-lighter.scss */ "./src/lesson_13/traffic-lighter.scss");
+/* harmony import */ var _traffic_lighter_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_traffic_lighter_scss__WEBPACK_IMPORTED_MODULE_1__);
 
+
+var trafficLighterRoot = document.querySelector(".traffic-lighter");
+var lights = trafficLighterRoot.querySelectorAll(".traffic-lighter__light");
+var togglerBtn = trafficLighterRoot.querySelector(".traffic-lighter__toggler");
+var isEnabled = false;
+var activeIndex = 0;
+var intervalId = 0;
+
+var toggleOffAll = function toggleOffAll() {
+  for (var i = 0; i < lights.length; i++) {
+    lights[i].classList.remove("active");
+  }
+};
+
+var activateLight = function activateLight() {
+  lights[activeIndex].classList.add("active");
+};
+
+var _loop = function _loop(i) {
+  lights[i].onclick = function () {
+    if (isEnabled) {
+      toggleOffAll();
+      activeIndex = i;
+      clearInterval(intervalId);
+      activateLight();
+      startAutoChange();
+    }
+  };
+};
+
+for (var i = 0; i < lights.length; i++) {
+  _loop(i);
+}
+
+var changeIndex = function changeIndex() {
+  if (activeIndex + 1 < lights.length) {
+    activeIndex += 1;
+  } else {
+    activeIndex = 0;
+  }
+};
+
+var toggleOffLighter = function toggleOffLighter() {
+  isEnabled = false;
+  toggleOffAll();
+  activeIndex = 0;
+  clearInterval(intervalId);
+};
+
+var startAutoChange = function startAutoChange() {
+  intervalId = setInterval(function () {
+    toggleOffAll();
+    changeIndex();
+    activateLight();
+  }, 1000);
+};
+
+var toggleOnLighter = function toggleOnLighter() {
+  isEnabled = true;
+  activateLight(0);
+  startAutoChange();
+};
+
+var togglerClickHandler = function togglerClickHandler() {
+  console.log("HELLO");
+
+  if (isEnabled) {
+    toggleOffLighter();
+  } else {
+    toggleOnLighter();
+  }
+};
+
+togglerBtn.onclick = togglerClickHandler;
 
 /***/ }),
 
-/***/ "./src/lesson_9/lesson_9.scss":
-/*!************************************!*\
-  !*** ./src/lesson_9/lesson_9.scss ***!
-  \************************************/
+/***/ "./src/lesson_13/lesson_13.scss":
+/*!**************************************!*\
+  !*** ./src/lesson_13/lesson_13.scss ***!
+  \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -112,17 +188,28 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 7:
-/*!****************************************!*\
-  !*** multi ./src/lesson_9/lesson_9.js ***!
-  \****************************************/
+/***/ "./src/lesson_13/traffic-lighter.scss":
+/*!********************************************!*\
+  !*** ./src/lesson_13/traffic-lighter.scss ***!
+  \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! ./src/lesson_9/lesson_9.js */"./src/lesson_9/lesson_9.js");
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ 14:
+/*!******************************************!*\
+  !*** multi ./src/lesson_13/lesson_13.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! ./src/lesson_13/lesson_13.js */"./src/lesson_13/lesson_13.js");
 
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=lesson_9.js.map
+//# sourceMappingURL=lesson_13.js.map

@@ -81,30 +81,44 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 12);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/lesson_9/lesson_9.js":
-/*!**********************************!*\
-  !*** ./src/lesson_9/lesson_9.js ***!
-  \**********************************/
+/***/ "./src/lesson_12/lesson_12.js":
+/*!************************************!*\
+  !*** ./src/lesson_12/lesson_12.js ***!
+  \************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _lesson_9_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lesson_9.scss */ "./src/lesson_9/lesson_9.scss");
-/* harmony import */ var _lesson_9_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_lesson_9_scss__WEBPACK_IMPORTED_MODULE_0__);
-
+/* harmony import */ var _lesson_12_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lesson_12.scss */ "./src/lesson_12/lesson_12.scss");
+/* harmony import */ var _lesson_12_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_lesson_12_scss__WEBPACK_IMPORTED_MODULE_0__);
+ // const btns = document.querySelectorAll(".btn");
+// const toogleOff = () => {
+//   for (let i = 0; i < btns.length; i++) {
+//     btns[i].style.backgroundColor = "";
+//   }
+// };
+// const toogleOn = btn => {
+//   btn.style.backgroundColor = getRandomColor();
+// };
+// for (let i = 0; i < btns.length; i++) {
+//   btns[i].onclick = () => {
+//     toogleOff();
+//     toogleOn(btns[i]);
+//   };
+// }
 
 /***/ }),
 
-/***/ "./src/lesson_9/lesson_9.scss":
-/*!************************************!*\
-  !*** ./src/lesson_9/lesson_9.scss ***!
-  \************************************/
+/***/ "./src/lesson_12/lesson_12.scss":
+/*!**************************************!*\
+  !*** ./src/lesson_12/lesson_12.scss ***!
+  \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -112,17 +126,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 7:
-/*!****************************************!*\
-  !*** multi ./src/lesson_9/lesson_9.js ***!
-  \****************************************/
+/***/ 12:
+/*!******************************************!*\
+  !*** multi ./src/lesson_12/lesson_12.js ***!
+  \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! ./src/lesson_9/lesson_9.js */"./src/lesson_9/lesson_9.js");
+module.exports = __webpack_require__(/*! ./src/lesson_12/lesson_12.js */"./src/lesson_12/lesson_12.js");
 
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=lesson_9.js.map
+//# sourceMappingURL=lesson_12.js.map

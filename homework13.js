@@ -81,30 +81,91 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 16);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/lesson_9/lesson_9.js":
-/*!**********************************!*\
-  !*** ./src/lesson_9/lesson_9.js ***!
-  \**********************************/
+/***/ "./src/homework13/homework13.js":
+/*!**************************************!*\
+  !*** ./src/homework13/homework13.js ***!
+  \**************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _lesson_9_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lesson_9.scss */ "./src/lesson_9/lesson_9.scss");
-/* harmony import */ var _lesson_9_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_lesson_9_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _homework13_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./homework13.scss */ "./src/homework13/homework13.scss");
+/* harmony import */ var _homework13_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_homework13_scss__WEBPACK_IMPORTED_MODULE_0__);
 
+var containerRoot = document.querySelector(".container");
+var blocks = containerRoot.querySelectorAll(".container__block");
+var nextButton = document.querySelector(".next");
+var prevButton = document.querySelector(".prev");
+var activeIndex = 0;
+
+var toggleOff = function toggleOff() {
+  for (var i = 0; i < blocks.length; i++) {
+    blocks[i].classList.remove("active");
+  }
+};
+
+var activeBlock = function activeBlock() {
+  blocks[activeIndex].classList.add("active");
+};
+
+var _loop = function _loop(i) {
+  blocks[i].onclick = function () {
+    toggleOff();
+    activeIndex = i;
+    activeBlock();
+    console.log("On Click");
+  };
+};
+
+for (var i = 0; i < blocks.length; i++) {
+  _loop(i);
+}
+
+var changeIndexRight = function changeIndexRight() {
+  if (activeIndex + 1 < blocks.length) {
+    activeIndex += 1;
+  } else {
+    activeIndex = 0;
+  }
+};
+
+var changeIndexLeft = function changeIndexLeft() {
+  if (activeIndex - 1 > -1) {
+    activeIndex -= 1;
+  } else {
+    activeIndex = 3;
+  }
+};
+
+var toggleClickRight = function toggleClickRight() {
+  toggleOff();
+  console.log("NEXT");
+  activeBlock(0);
+  changeIndexRight();
+};
+
+var toggleClickLeft = function toggleClickLeft() {
+  toggleOff();
+  console.log("PREV");
+  activeBlock(0);
+  changeIndexLeft();
+};
+
+nextButton.onclick = toggleClickRight;
+prevButton.onclick = toggleClickLeft;
 
 /***/ }),
 
-/***/ "./src/lesson_9/lesson_9.scss":
-/*!************************************!*\
-  !*** ./src/lesson_9/lesson_9.scss ***!
-  \************************************/
+/***/ "./src/homework13/homework13.scss":
+/*!****************************************!*\
+  !*** ./src/homework13/homework13.scss ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -112,17 +173,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 7:
-/*!****************************************!*\
-  !*** multi ./src/lesson_9/lesson_9.js ***!
-  \****************************************/
+/***/ 16:
+/*!********************************************!*\
+  !*** multi ./src/homework13/homework13.js ***!
+  \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! ./src/lesson_9/lesson_9.js */"./src/lesson_9/lesson_9.js");
+module.exports = __webpack_require__(/*! ./src/homework13/homework13.js */"./src/homework13/homework13.js");
 
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=lesson_9.js.map
+//# sourceMappingURL=homework13.js.map

@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/text_13/text_13.scss"],"names":[],"mappings":"AAAA,WAAW,aAAa,oBAAoB,OAAO,YAAY,aAAa,iBAAiB,YAAY,QAAQ","file":"text_13.css","sourcesContent":[".container{display:flex;flex-direction:wrap}.block{width:200px;height:200px;background:green;margin:10px}.active{border:5px solid black}\n"],"sourceRoot":""}
