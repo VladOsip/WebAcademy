@@ -1,0 +1,21 @@
+.slide-show {
+  &__slides {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+  }
+  &__slide {
+    width: 400px;
+    visibility: hidden;
+    opacity: 0;
+    position: relative;
+    &_active {
+      visibility: visible;
+      opacity: 1;
+      z-index: 1;
+    }
+  }
+  &__img {
+    width: 100%;
+  }
+}

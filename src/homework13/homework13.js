@@ -8,25 +8,12 @@ const prevButton = document.querySelector(".prev");
 let activeIndex = 0;
 
 const toggleOff = () => {
-  for (let i = 0; i < blocks.length; i++) {
-    blocks[i].classList.remove("active");
-  }
+  blocks[activeIndex].classList.remove("active");
 };
 
 const activeBlock = () => {
   blocks[activeIndex].classList.add("active");
 };
-
-// Для выделения по клике на блок
-
-// for (let i = 0; i < blocks.length; i++) {
-//   blocks[i].onclick = function() {
-//     toggleOff();
-//     activeIndex = i;
-//     activeBlock();
-//     console.log("On Click");
-//   };
-// }
 
 const changeIndexRight = () => {
   if (activeIndex + 1 < blocks.length) {

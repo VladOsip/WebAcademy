@@ -2,8 +2,8 @@
   width: 100px;
   background: #efefef;
   &__light {
-    margin: 20px auto;
     $size: 50px;
+    margin: 20px auto;
     width: $size;
     height: $size;
     border: 1px solid black;
