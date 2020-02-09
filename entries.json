@@ -44,9 +44,6 @@
   "lesson_13": [
     "./src/lesson_13/lesson_13.js"
   ],
-  "text_13": [
-    "./src/text_13/text_13.js"
-  ],
   "homework13": [
     "./src/homework13/homework13.js"
   ],
@@ -67,5 +64,11 @@
   ],
   "homework17": [
     "./src/homework17/homework17.js"
+  ],
+  "lesson_18": [
+    "./src/lesson_18/lesson_18.js"
+  ],
+  "my_project": [
+    "./src/my_project/my_project.js"
   ]
 }

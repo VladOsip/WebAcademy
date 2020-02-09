@@ -1,0 +1,21 @@
+.dropdownClass {
+  visibility: hidden;
+  min-width: 78px;
+  min-height: 20px;
+  background-color: red;
+  border: 2px solid black;
+  transition: all 0.4s;
+}
+
+.listClass {
+  color: #ffffff;
+}
+
+.btn {
+  min-width: 90px;
+  padding: 10px;
+  margin: 20px;
+  background-color: red;
+  border: 2px solid black;
+  color: #ffffff;
+}

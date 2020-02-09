@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito:300&display=swap");
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  &__header {
+    position: sticky;
+    margin-bottom: 40px;
+    width: 100%;
+    height: 80px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    &__logo-field {
+      position: absolute;
+      left: 200px;
+      letter-spacing: 4px;
+      font-size: 20px;
+    }
+    &__nav-field {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 40px;
+      width: 100%;
+      max-width: 500px;
+      top: 20px;
+      right: 0;
+    }
+    &__social-field {
+      margin-right: 80px;
+      width: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      &_img {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+  &__content {
+    width: 100%;
+    height: 550px;
+    background-image: url(./132.webp);
+    &_text1 {
+      font-family: "Poppins", sans-serif;
+      font-size: 55px;
+      line-height: 71.5px;
+      font-weight: bold;
+      position: absolute;
+      top: 210px;
+      left: 450px;
+    }
+    &_text2 {
+      font-family: "Poppins", sans-serif;
+      font-size: 55px;
+      line-height: 71.5px;
+      font-weight: bold;
+      position: absolute;
+      top: 290px;
+      left: 450px;
+    }
+    .app-store {
+      position: absolute;
+      width: 130px;
+      height: 40px;
+      left: 450px;
+      top: 470px;
+    }
+    .google-play {
+      position: absolute;
+      width: 160px;
+      height: 60px;
+      left: 590px;
+      top: 460px;
+    }
+    .small-pencil {
+      position: absolute;
+      left: 550px;
+      transform: rotate(-13deg);
+    }
+  }
+  &__slider {
+    top: 180px;
+    right: 400px;
+    position: absolute;
+    width: 480px;
+    height: 430px;
+    &_A {
+      position: absolute;
+      background-image: url(./a.png);
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+    }
+    &_B {
+      position: absolute;
+      background-image: url(./b.png);
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+    }
+    &_C {
+      position: absolute;
+      background-image: url(./c.png);
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+    }
+  }
+  &__content2 {
+    display: flex;
+    width: 100%;
+    height: 630px;
+    background-color: #fcf6cc;
+    margin-top: 260px;
+    .small-block {
+      position: relative;
+      width: 320px;
+      height: 380px;
+      background: #fff4f3;
+      bottom: 140px;
+      &_picture {
+        background-image: url(./Artboard1.png);
+        width: 160px;
+        height: 160px;
+        position: absolute;
+        transform: translate(50%, 25%);
+      }
+      &_text {
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: 1px;
+        position: absolute;
+        left: 50%;
+        top: 70%;
+        transform: translateX(-50%);
+        text-align: center;
+      }
+    }
+  }
+}
