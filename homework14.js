@@ -81,55 +81,79 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 15);
+/******/ 	return __webpack_require__(__webpack_require__.s = 17);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/text_13/text_13.js":
-/*!********************************!*\
-  !*** ./src/text_13/text_13.js ***!
-  \********************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _text_13_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./text_13.scss */ "./src/text_13/text_13.scss");
-/* harmony import */ var _text_13_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_text_13_scss__WEBPACK_IMPORTED_MODULE_0__);
-
-var blocks = document.querySelector(".block");
-var togglerNext = document.querySelector(".next");
-var togglerPrev = document.querySelector(".prev");
-
-blocks.onclick = function () {
-  blocks.classList.add("active");
-};
-
-/***/ }),
-
-/***/ "./src/text_13/text_13.scss":
-/*!**********************************!*\
-  !*** ./src/text_13/text_13.scss ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ 15:
+/***/ "./src/homework14/homework14.js":
 /*!**************************************!*\
-  !*** multi ./src/text_13/text_13.js ***!
+  !*** ./src/homework14/homework14.js ***!
   \**************************************/
 /*! no static exports found */
+/***/ (function(module, exports) {
+
+function _readOnlyError(name) { throw new Error("\"" + name + "\" is read-only"); }
+
+var getRandomNumber = function getRandomNumber(size) {
+  return Math.floor(Math.random() * size);
+};
+
+var getDistance = function getDistance(event, target) {
+  var diffX = event.offsetX - target.x;
+  var diffY = event.offsetY - target.y;
+  return Math.sqrt(diffX * diffX + diffY * diffY);
+};
+
+var getDistanceHint = function getDistanceHint(distance) {
+  if (distance < 10) {
+    return "Обожжешься!";
+  } else if (distance < 20) {
+    return "Очень горячо";
+  } else if (distance < 40) {
+    return "Горячо";
+  } else if (distance < 80) {
+    return "Тепло";
+  } else if (distance < 160) {
+    return "Холодно";
+  } else if (distance < 320) {
+    return "Очень холодно";
+  } else {
+    return "Замерзнешь!";
+  }
+};
+
+var width = 400;
+var height = 400;
+var clicks = 0;
+var target = {
+  x: getRandomNumber(width),
+  y: getRandomNumber(height)
+};
+$("#map").click(function (event) {
+  _readOnlyError("clicks"), clicks++;
+  var distance = getDistance(event, target);
+  var distanceHint = getDistanceHint(distance);
+  $("#distance").text(distanceHint);
+
+  if (distance < 8) {
+    alert("Клад найден! Сделано кликов: " + clicks);
+  }
+});
+
+/***/ }),
+
+/***/ 17:
+/*!********************************************!*\
+  !*** multi ./src/homework14/homework14.js ***!
+  \********************************************/
+/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! ./src/text_13/text_13.js */"./src/text_13/text_13.js");
+module.exports = __webpack_require__(/*! ./src/homework14/homework14.js */"./src/homework14/homework14.js");
 
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=text_13.js.map
+//# sourceMappingURL=homework14.js.map

@@ -81,76 +81,84 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 15);
+/******/ 	return __webpack_require__(__webpack_require__.s = 16);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/homework13/homework13.js":
-/*!**************************************!*\
-  !*** ./src/homework13/homework13.js ***!
-  \**************************************/
+/***/ "./src/lesson_14/lesson_14.js":
+/*!************************************!*\
+  !*** ./src/lesson_14/lesson_14.js ***!
+  \************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _homework13_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./homework13.scss */ "./src/homework13/homework13.scss");
-/* harmony import */ var _homework13_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_homework13_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _lesson_14_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lesson_14.scss */ "./src/lesson_14/lesson_14.scss");
+/* harmony import */ var _lesson_14_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_lesson_14_scss__WEBPACK_IMPORTED_MODULE_0__);
+ // import { commentForm } from "./comment-form";
+// import { garland } from "./garland";
+// garland(100, 1500, 2);
+// commentForm();
+// function User(name) {
+//   this.name = name;
+//   this.hello = "world";
+// }
+// User.prototype.greet = function() {
+//   console.log(this.name);
+// };
+// const user1 = new User("Vlad");
+// const user1 = new User("John");
+// console.log(user1);
+// console.log(user2);
+// const template = `
+// <article class="hello">
+// <h1 class="header">${prompt("Header")}</h1>
+// <p class="test">${prompt("content")}</p>
+// </article>
+// `;
+// const header = document.createElement("h1");
+// const article = document.createElement("article");
+// const p = document.createElement("p");
+// const body = document.querySelector("body");
+// body.innerHTML = template;
+// body.appendChild(article);
+// console.log(header);
+// function greeting() {
+//   console.log("hello " + this.name);
+// }
+// const user = {
+//   name: "Vlad",
+//   greet: greeting
+// };
+// const user2 = {
+//   name: "John",
+//   greet: greeting
+// };
+// user.greet();
+// user2.greet();
 
-var containerRoot = document.querySelector(".container");
-var blocks = containerRoot.querySelectorAll(".container__block");
-var nextButton = document.querySelector(".next");
-var prevButton = document.querySelector(".prev");
-var activeIndex = 0;
+function User(firstName, secondName) {
+  this.firstName = firstName;
+  this.secondName = secondName;
+}
 
-var toggleOff = function toggleOff() {
-  blocks[activeIndex].classList.remove("active");
+User.prototype.test = function () {
+  console.log(this.firstName + this.secondName);
 };
 
-var activeBlock = function activeBlock() {
-  blocks[activeIndex].classList.add("active");
-};
-
-var changeIndexRight = function changeIndexRight() {
-  if (activeIndex + 1 < blocks.length) {
-    activeIndex += 1;
-  } else {
-    activeIndex = 0;
-  }
-};
-
-var changeIndexLeft = function changeIndexLeft() {
-  if (activeIndex - 1 > -1) {
-    activeIndex -= 1;
-  } else {
-    activeIndex = 3;
-  }
-};
-
-var toggleClickRight = function toggleClickRight() {
-  toggleOff();
-  console.log("NEXT");
-  changeIndexRight();
-  activeBlock(0);
-};
-
-var toggleClickLeft = function toggleClickLeft() {
-  toggleOff();
-  console.log("PREV");
-  changeIndexLeft();
-  activeBlock(0);
-};
-
-nextButton.onclick = toggleClickRight;
-prevButton.onclick = toggleClickLeft;
+var user1 = new User("Vlad", "Osipenko");
+var user2 = new User("John", "Likovskii");
+console.log(user1);
+console.log(user2);
 
 /***/ }),
 
-/***/ "./src/homework13/homework13.scss":
-/*!****************************************!*\
-  !*** ./src/homework13/homework13.scss ***!
-  \****************************************/
+/***/ "./src/lesson_14/lesson_14.scss":
+/*!**************************************!*\
+  !*** ./src/lesson_14/lesson_14.scss ***!
+  \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -158,17 +166,17 @@ prevButton.onclick = toggleClickLeft;
 
 /***/ }),
 
-/***/ 15:
-/*!********************************************!*\
-  !*** multi ./src/homework13/homework13.js ***!
-  \********************************************/
+/***/ 16:
+/*!******************************************!*\
+  !*** multi ./src/lesson_14/lesson_14.js ***!
+  \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! ./src/homework13/homework13.js */"./src/homework13/homework13.js");
+module.exports = __webpack_require__(/*! ./src/lesson_14/lesson_14.js */"./src/lesson_14/lesson_14.js");
 
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=homework13.js.map
+//# sourceMappingURL=lesson_14.js.map

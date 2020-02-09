@@ -81,75 +81,134 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 15);
+/******/ 	return __webpack_require__(__webpack_require__.s = 21);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/homework13/homework13.js":
+/***/ "./src/homework17/ads.js":
+/*!*******************************!*\
+  !*** ./src/homework17/ads.js ***!
+  \*******************************/
+/*! exports provided: Ads */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Ads", function() { return Ads; });
+/* harmony import */ var _ads_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ads.scss */ "./src/homework17/ads.scss");
+/* harmony import */ var _ads_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_ads_scss__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function Ads(mountPoint) {
+  this.mountPoint = mountPoint;
+}
+
+Ads.prototype.init = function () {
+  this.render();
+  this.getAds();
+};
+
+Ads.prototype.render = function () {
+  this.container = document.createElement("div");
+  this.container.classList.add("ads__container");
+  this.mountPoint.appendChild(this.container);
+};
+
+Ads.prototype.getAds = function () {
+  var _this = this;
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "http://localhost:3000/ads");
+  xhr.send();
+
+  xhr.onload = function () {
+    if (xhr.status >= 200 && xhr.status < 400) {
+      var data = JSON.parse(xhr.response);
+
+      _this.renderAds(data);
+
+      console.log(data);
+    }
+  };
+};
+
+Ads.prototype.renderAds = function (ads) {
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = ads[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var ad = _step.value;
+      this.renderAd(ad);
+    }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+        _iterator["return"]();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+};
+
+Ads.prototype.renderAd = function (ad) {
+  var div = document.createElement("div");
+  div.classList.add("ads");
+  var img = document.createElement("img");
+  img.classList.add("ads__img");
+  var title = document.createElement("div");
+  title.classList.add("ads__title");
+  title.textContent = ad.title;
+  img.src = ad.img;
+  div.appendChild(img);
+  this.container.appendChild(div);
+};
+
+
+
+/***/ }),
+
+/***/ "./src/homework17/ads.scss":
+/*!*********************************!*\
+  !*** ./src/homework17/ads.scss ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ "./src/homework17/homework17.js":
 /*!**************************************!*\
-  !*** ./src/homework13/homework13.js ***!
+  !*** ./src/homework17/homework17.js ***!
   \**************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _homework13_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./homework13.scss */ "./src/homework13/homework13.scss");
-/* harmony import */ var _homework13_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_homework13_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _homework17_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./homework17.scss */ "./src/homework17/homework17.scss");
+/* harmony import */ var _homework17_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_homework17_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _ads__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ads */ "./src/homework17/ads.js");
 
-var containerRoot = document.querySelector(".container");
-var blocks = containerRoot.querySelectorAll(".container__block");
-var nextButton = document.querySelector(".next");
-var prevButton = document.querySelector(".prev");
-var activeIndex = 0;
 
-var toggleOff = function toggleOff() {
-  blocks[activeIndex].classList.remove("active");
-};
-
-var activeBlock = function activeBlock() {
-  blocks[activeIndex].classList.add("active");
-};
-
-var changeIndexRight = function changeIndexRight() {
-  if (activeIndex + 1 < blocks.length) {
-    activeIndex += 1;
-  } else {
-    activeIndex = 0;
-  }
-};
-
-var changeIndexLeft = function changeIndexLeft() {
-  if (activeIndex - 1 > -1) {
-    activeIndex -= 1;
-  } else {
-    activeIndex = 3;
-  }
-};
-
-var toggleClickRight = function toggleClickRight() {
-  toggleOff();
-  console.log("NEXT");
-  changeIndexRight();
-  activeBlock(0);
-};
-
-var toggleClickLeft = function toggleClickLeft() {
-  toggleOff();
-  console.log("PREV");
-  changeIndexLeft();
-  activeBlock(0);
-};
-
-nextButton.onclick = toggleClickRight;
-prevButton.onclick = toggleClickLeft;
+var MyAds = new _ads__WEBPACK_IMPORTED_MODULE_1__["Ads"]();
+MyAds.init();
 
 /***/ }),
 
-/***/ "./src/homework13/homework13.scss":
+/***/ "./src/homework17/homework17.scss":
 /*!****************************************!*\
-  !*** ./src/homework13/homework13.scss ***!
+  !*** ./src/homework17/homework17.scss ***!
   \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -158,17 +217,17 @@ prevButton.onclick = toggleClickLeft;
 
 /***/ }),
 
-/***/ 15:
+/***/ 21:
 /*!********************************************!*\
-  !*** multi ./src/homework13/homework13.js ***!
+  !*** multi ./src/homework17/homework17.js ***!
   \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! ./src/homework13/homework13.js */"./src/homework13/homework13.js");
+module.exports = __webpack_require__(/*! ./src/homework17/homework17.js */"./src/homework17/homework17.js");
 
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=homework13.js.map
+//# sourceMappingURL=homework17.js.map
