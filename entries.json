@@ -70,5 +70,8 @@
   ],
   "my_project": [
     "./src/my_project/my_project.js"
+  ],
+  "test1": [
+    "./src/test1/test1.js"
   ]
 }

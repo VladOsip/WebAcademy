@@ -1,0 +1,24 @@
+@media (max-width: 1200px) {
+  body {
+    overflow-x: hidden;
+  }
+  .main {
+    &__slider {
+      right: 5%;
+    }
+    &__content {
+      &_text1 {
+        left: 270px;
+      }
+      &_text2 {
+        left: 270px;
+      }
+      .small-pencil {
+        left: 300px;
+      }
+    }
+    .app-store {
+      left: 70%;
+    }
+  }
+}
